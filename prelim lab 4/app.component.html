@@ -1,0 +1,24 @@
+<div class="conatiner">
+  <div><h1>LAB 4: ACTIVITY</h1></div>
+
+  <h2>Interpolation:</h2>
+  <p>
+    Example of an interpolated string: {{ name }}<br />
+    Example of an interpolated number: {{ age }}
+  </p>
+
+  <input type="text" [value]="myName" />
+
+  <p [style.color]="Mycolor">Text color is styled using style binding</p>
+
+  <p [class]="appliedcssclass">This line applied the style binding.</p>
+
+  <p [class.blue]="notappliedcssclass">
+    This line doesn't applied style binding.
+  </p>
+
+  <h2>Event Binding</h2>
+
+  <button (click)="showData($event)">Click here</button>
+  <button on-click="showData($event)">Click here</button>
+</div>
