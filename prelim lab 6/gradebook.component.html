@@ -1,0 +1,49 @@
+<div>
+  <h1>Lab 6 Activity: Directives Demo</h1>
+
+  <h3>ngIf</h3>
+  <div *ngIf="true">Display Data!</div>
+
+  <h3>ngIfElse</h3>
+  <div *ngIf="isLogIn; elseisLogOut">Hello you are Logged in!</div>
+  <ng-template #isLogOut>You're Logged out.</ng-template>
+
+  <h3>ngFor</h3>
+  <ul>
+    <li *ngFor="let a of list">
+      {{ a }}
+    </li>
+  </ul>
+
+  <h3>ngFor using TrackBy</h3>
+
+  <ul>
+    <li *ngFor="let std of studentArr; trackBy: trackByData">
+      {{ std.name }}
+    </li>
+  </ul>
+
+  <h3>ngSwitch</h3>
+  <ul [ngSwitch]="logInName">
+    <li *ngSwitchCase="'user'"><p>User is Logged in</p></li>
+    <li *ngSwitchCase="'admin'"><p>admin is Logged in</p></li>
+    <li *ngSwitchDefault><p>please choose login name</p></li>
+  </ul>
+
+  <table class="table" border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of staff">
+        <td>{{ user.firstname }} {{ user.lastname }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
