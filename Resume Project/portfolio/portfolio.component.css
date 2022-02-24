@@ -1,0 +1,21 @@
+.container {
+  background-color: rgb(235, 194, 194);
+  width: 60em;
+  border: 20px solid #666;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10em;
+  padding: 40px;
+}
+h1 {
+  text-align: center;
+}
+
+table {
+  border: black;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
